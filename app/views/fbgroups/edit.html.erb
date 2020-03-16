@@ -1,0 +1,41 @@
+<div class="row">
+    <div class="col-md-6">
+    <h1>Lägg till en grupp!</h1>
+        <%= form_for @fbgroup do |f| %>
+            <div class="form-group">
+                <%= f.text_field :name, :placeholder => "Stad", :class => "form-control" %>
+            </div>
+            <div class="form-group">
+                <%= f.text_field :url, :placeholder => "Länk till FB-Grupp", :class => "form-control" %>
+            </div>
+            <div class="form-group">
+            <%= f.text_field :adminemail, :placeholder => "Admin email", :class => "form-control" %>
+            </div>
+            <%= f.submit "Spara Grupp" %>
+        <% end %>
+    </div>
+    <div class="col-md-12">
+    <h1>Nuvarande grupper</h1>
+        <table class="table">
+            <thead>
+                    <tr>
+                    <th scope="col">#</th>
+                    <th scope="col">Ort</th>
+                    <th scope="col">URL</th>
+                    <th scope="col">Adminemail</th>
+                </tr>
+            </thead>
+            <tbody>
+                <% @fbgroups.each do |group| %>
+                    <tr>
+                        <th scope="row"><%= group.id %></th>
+                        <td><%= group.name %></td>
+                        <td><%= group.url %></td>
+                        <td><%= group.adminemail %></td>
+                        <td><%= link_to "Ändra", edit_fbgroup_url(group.id) %></td>
+                    </tr>
+                <% end %>
+            </tbody>
+        </table>
+    </div>
+</div>

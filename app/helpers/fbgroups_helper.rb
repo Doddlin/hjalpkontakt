@@ -1,0 +1,2 @@
+module FbgroupsHelper
+end
