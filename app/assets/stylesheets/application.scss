@@ -15,5 +15,11 @@
  @import "bootstrap-custom";
 
  #map{
-     height: 100vh;
+     height: 60vh;
  }
+
+ @media (min-width: 768px) { 
+    #map{
+        height: 100vh;
+    }    
+}

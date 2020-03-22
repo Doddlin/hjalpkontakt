@@ -11,6 +11,12 @@
             <div class="form-group">
             <%= f.text_field :adminemail, :placeholder => "Admin email", :class => "form-control" %>
             </div>
+            <div class="form-group">
+            <%= f.number_field :lat, step: :any, :placeholder => "Latitude", :class => "form-control" %>
+            </div>
+            <div class="form-group">
+            <%= f.number_field :long, step: :any, :placeholder => "Longitude", :class => "form-control" %>
+            </div>
             <%= f.submit "Spara Grupp" %>
         <% end %>
     </div>

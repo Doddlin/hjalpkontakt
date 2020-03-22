@@ -29,7 +29,7 @@ class FbgroupsController < ApplicationController
     private
 
     def fbgroup_params
-        params.require(:fbgroup).permit(:name, :url, :adminemail)
+        params.require(:fbgroup).permit(:name, :url, :adminemail, :lat, :long)
     end
 
 end
